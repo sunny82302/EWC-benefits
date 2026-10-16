@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博西家用電器職工福利委員會 - 特約商店優惠總整理懶人包 | BSH Employee Welfare Merchant Guide</title>
+    <style>
+        :root {
+            --primary-color: #002b49;
+            --primary-light: #1a4a75;
+            --accent-color: #0056b3;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2b2b2b;
+            --border-color: #e1e6eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Language Switcher Bar */
+        .lang-switch-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .update-tag {
+            font-size: 13px;
+            color: #666;
+            background-color: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 500;
+        }
+
+        .lang-btn-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .lang-btn {
+            background-color: #eef6fc;
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn:hover, .lang-btn.active {
+            background-color: var(--accent-color);
+            color: #ffffff;
+        }
+
+        /* Header Banner */
+        .header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: #ffffff;
+            padding: 22px 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .header .subtitle {
+            margin-top: 6px;
+            font-size: 15px;
+            color: #d1e3f0;
+        }
+
+        /* General Notice Box */
+        .notice-box {
+            background-color: #eef6fc;
+            border-left: 5px solid var(--accent-color);
+            padding: 12px 18px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+        }
+
+        .notice-box ul {
+            margin: 5px 0 0 20px;
+            padding: 0;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-color);
+            border-bottom: 2.5px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Cards */
+        .card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #111111;
+        }
+
+        .badge {
+            font-size: 12px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .badge-black { background: #000; color: #fff; }
+        .badge-green { background: #e6f4ea; color: #137333; }
+        .badge-purple { background: #f3e8ff; color: #6b21a8; }
+        .badge-red { background: #fde8e8; color: #c53030; }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .info-table td {
+            padding: 4px 0;
+            vertical-align: top;
+        }
+
+        .info-table td.label {
+            width: 110px;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .info-table td.content {
+            color: #222;
+        }
+
+        .highlight-text {
+            color: #d93025;
+            font-weight: bold;
+        }
+
+        .code-box {
+            background-color: #f1f3f4;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            padding: 2px 7px;
+            font-family: monospace;
+            font-weight: bold;
+            color: #202124;
+            font-size: 13px;
+        }
+
+        /* Uber Layout & Step Flow */
+        .uber-banner-alert {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .uber-flow-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 15px;
+        }
+
+        .flow-step-card {
+            flex: 1 1 150px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .flow-step-num {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 22px;
+            margin-bottom: 6px;
+        }
+
+        .flow-step-title {
+            font-size: 12px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 4px;
+            min-height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .flow-step-desc {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .uber-qr-side {
+            background: #f4f4f4;
+            border: 1px dashed #bbb;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+        }
+
+        .qr-svg {
+            width: 115px;
+            height: 115px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+            border-top: 1px solid #e0e0e0;
+            padding-top: 15px;
+        }
+
+        /* Dynamic Language Visibility */
+        [lang="en"] { display: none; }
+        .lang-en [lang="zh"] { display: none; }
+        .lang-en [lang="en"] { display: inline; }
+        .lang-en div[lang="en"], .lang-en span[lang="en"], .lang-en td[lang="en"], .lang-en li[lang="en"] { display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Switcher & Update Date -->
+        <div class="lang-switch-container">
+            <div class="update-tag">
+                <span lang="zh">📅 最後更新日期：2026/10/16</span>
+                <span lang="en">📅 Last Updated: 2026/10/16</span>
+            </div>
+            <div class="lang-btn-group">
+                <button class="lang-btn active" id="btn-zh" onclick="switchLang('zh')">繁體中文</button>
+                <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <div class="header">
+            <h1 lang="zh">博西家用電器職工福利委員會</h1>
+            <h1 lang="en">BSH Employee Welfare Committee</h1>
+            <div class="subtitle" lang="zh">🎉 2026年度 企業同仁專屬特約商店優惠懶人包</div>
+            <div class="subtitle" lang="en">🎉 2026 Employee Exclusive Corporate Partner Discounts</div>
+        </div>
+
+        <!-- General Notice -->
+        <div class="notice-box">
+            <strong lang="zh">📌 福利使用通用須知：</strong>
+            <strong lang="en">📌 General Guidelines:</strong>
+            <ul>
+                <li lang="zh"><strong>門市消費：</strong>請主動出示<strong>「員工識別證」</strong>以享有特約折扣優惠。</li>
+                <li lang="en"><strong>In-Store Purchase:</strong> Please present your <strong>Employee ID Card</strong> at checkout to claim discounts.</li>
+                <li lang="zh"><strong>線上平台：</strong>請使用企業 Email 註冊或於結帳頁輸入企業專屬優惠碼。</li>
+                <li lang="en"><strong>Online Platforms:</strong> Register with your corporate email or enter the exclusive promo code at checkout.</li>
+                <li lang="zh"><strong>注意事項：</strong>本優惠限博西同仁（及部分限定眷屬）使用，請勿隨意公開外流優惠碼。</li>
+                <li lang="en"><strong>Notice:</strong> Benefits are restricted to BSH employees (and eligible family members). Do not share codes publicly.</li>
+            </ul>
+        </div>
+
+        <!-- Section 1: Uber -->
+        <div class="section-title">
+            <span>🚗</span>
+            <span lang="zh">交通與外送福利 — Uber & Uber Eats</span>
+            <span lang="en">Transportation & Food Delivery — Uber & Uber Eats</span>
+        </div>
+
+        <div class="card" style="border: 2px solid #000;">
+            <div class="card-header">
+                <div class="card-title" lang="zh">Uber / Uber Eats 企業福利帳戶 & 12個月 Uber One 免費會籍</div>
+                <div class="card-title" lang="en">Uber / Uber Eats Business Account & Free 12-Month Uber One Membership</div>
+                <div class="badge badge-black" lang="zh">重磅推薦</div>
+                <div class="badge badge-black" lang="en">Featured</div>
+            </div>
+
+            <div class="uber-banner-alert">
+                <span lang="zh">🚨 Uber One 兌換有限，請儘快加入兌換！</span>
+                <span lang="en">🚨 Limited Uber One redemptions, please claim as soon as possible!</span>
+            </div>
+
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🎁 會員禮遇：</td>
+                    <td class="label" lang="en">🎁 Membership:</td>
+                    <td class="content" lang="zh"><strong class="highlight-text">免費兌換 12 個月 Uber One 會籍</strong>（享滿額免運、乘車 5% 點數回饋）。</td>
+                    <td class="content" lang="en"><strong class="highlight-text">Free 12-Month Uber One Membership</strong> (Free delivery & 5% ride credits).</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">🛍️ 專屬折扣碼：</td>
+                    <td class="label" lang="en">🛍️ Promo Codes:</td>
+                    <td class="content" lang="zh">
+                        • 新加入滿 $299 折抵：<span class="code-box">U4BTW10L4X</span>（12週內可用12次）<br>
+                        • 生鮮採買滿 $699 折抵：<span class="code-box">U4BTW12</span>（4週內可用4次）<br>
+                        • 大額補貨滿 $3,000 折抵：<span class="code-box">U4BTW600</span>（12週內可用12次）
+                    </td>
+                    <td class="content" lang="en">
+                        • New user $299+ order: <span class="code-box">U4BTW10L4X</span> (12 uses within 12 weeks)<br>
+                        • Grocery $699+ order: <span class="code-box">U4BTW12</span> (4 uses within 4 weeks)<br>
+                        • Bulk buy $3,000+ order: <span class="code-box">U4BTW600</span> (12 uses within 12 weeks)
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Visual Step-by-Step Flow -->
+            <div style="margin-top:15px; font-weight:bold; font-size:14px;" lang="zh">📱 兌換與綁定圖文步驟指南：</div>
+            <div style="margin-top:15px; font-weight:bold; font-size:14px;" lang="en">📱 Step-by-Step Activation Guide:</div>
+
+            <div class="uber-flow-container">
+                <div class="uber-qr-side">
+                    <img class="qr-svg" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fp.uber.com%2Fn77eAW" alt="Uber QR Code">
+                    <div style="font-size:11px; font-weight:bold; margin-top:4px;" lang="zh">【掃描 QRcode】</div>
+                    <div style="font-size:11px; font-weight:bold; margin-top:4px;" lang="en">【Scan QR Code】</div>
+                    <div style="font-size:10px; color:#555;" lang="zh">填寫姓名與公司 Email<br><strong style="color:#d93025;">(務必使用 @bshg.com)</strong><br>點選「下一步」</div>
+                    <div style="font-size:10px; color:#555;" lang="en">Fill Name & Corporate Email<br><strong style="color:#d93025;">(Must use @bshg.com)</strong><br>Click 'Next'</div>
+                </div>
+
+                <div class="flow-step-card">
+                    <div class="flow-step-num">1</div>
+                    <div class="flow-step-title" lang="zh">開驗證郵件</div>
+                    <div class="flow-step-title" lang="en">Open Verification Email</div>
+                    <div class="flow-step-desc" lang="zh">手機打開公司信箱 (<strong>@bshg.com</strong>)，點擊驗證郵件中的「啟用帳戶」。</div>
+                    <div class="flow-step-desc" lang="en">Open your corporate email (<strong>@bshg.com</strong>) & click 'Activate Account'.</div>
+                </div>
+
+                <div class="flow-step-card">
+                    <div class="flow-step-num">2</div>
+                    <div class="flow-step-title" lang="zh">喚起 App 兌換</div>
+                    <div class="flow-step-title" lang="en">Launch App</div>
+                    <div class="flow-step-desc" lang="zh">自動喚起 App，點擊加入並兌換 UBER ONE 免費會籍。</div>
+                    <div class="flow-step-desc" lang="en">App opens automatically to claim 12-month free Uber One.</div>
+                </div>
+
+                <div class="flow-step-card">
+                    <div class="flow-step-num">3</div>
+                    <div class="flow-step-title" lang="zh">選擇付款方式</div>
+                    <div class="flow-step-title" lang="en">Select Payment</div>
+                    <div class="flow-step-desc" lang="zh">選擇習慣的付款方式並確認加入。</div>
+                    <div class="flow-step-desc" lang="en">Select your preferred payment method and confirm.</div>
+                </div>
+
+                <div class="flow-step-card" style="background:#e6f4ea; border-color:#a8dab5;">
+                    <div class="flow-step-num" style="background:#137333;">4</div>
+                    <div class="flow-step-title" style="color:#137333;" lang="zh">🎉 加入成功！</div>
+                    <div class="flow-step-title" style="color:#137333;" lang="en">🎉 Success!</div>
+                    <div class="flow-step-desc" lang="zh">於 App 個人帳戶切換成「博西企業福利帳戶」享折抵。</div>
+                    <div class="flow-step-desc" lang="en">Switch payment profile to Corporate Account to enjoy perks.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Food & Beverage -->
+        <div class="section-title">
+            <span>☕</span>
+            <span lang="zh">美食餐飲與歡聚優惠</span>
+            <span lang="en">Food, Drinks & Entertainment</span>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">黑沃咖啡 (HWC Coffee) — 台北內科店</div>
+                <div class="card-title" lang="en">HWC Coffee — Neihu Technology Park Store</div>
+                <div class="badge badge-green" lang="zh">內科特約</div>
+                <div class="badge badge-green" lang="en">Neihu Store</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">☕ 優惠內容：</td>
+                    <td class="label" lang="en">☕ Discount:</td>
+                    <td class="content" lang="zh">1. 來店飲品享 <strong>88 折</strong> | 2. 外送飲品享 <strong>9 折</strong>（滿 $500 可外送） | 3. 會議桶咖啡（美式 12oz 30杯）專屬優惠價。</td>
+                    <td class="content" lang="en">1. <strong>12% OFF</strong> in-store drinks | 2. <strong>10% OFF</strong> delivery drinks (Min. order $500) | 3. Special rate for 30-cup Meeting Coffee Barrels.</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📍 門市地點：</td>
+                    <td class="label" lang="en">📍 Location:</td>
+                    <td class="content">台北市內湖區內湖路一段323巷41巷10號1樓 (02-2627-0680)</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">2026/04/29 – 2026/10/28</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">路易莎咖啡 (Louisa Coffee) — 洲子110門市</div>
+                <div class="card-title" lang="en">Louisa Coffee — Zhouzi 110 Store</div>
+                <div class="badge badge-green" lang="zh">內科特約</div>
+                <div class="badge badge-green" lang="en">Neihu Store</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">☕ 優惠內容：</td>
+                    <td class="label" lang="en">☕ Discount:</td>
+                    <td class="content" lang="zh">結帳時主動出示<strong>「員工識別證」</strong>，消費即享 <strong class="highlight-text">9 折優惠</strong>。</td>
+                    <td class="content" lang="en">Present your <strong>Employee ID Card</strong> at checkout to enjoy <strong class="highlight-text">10% OFF</strong>.</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📍 門市地點：</td>
+                    <td class="label" lang="en">📍 Location:</td>
+                    <td class="content">台北市內湖區洲子街110號</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">錢櫃 KTV (Cashbox KTV) — 台中自由店</div>
+                <div class="card-title" lang="en">Cashbox KTV — Taichung Ziyou Branch</div>
+                <div class="badge badge-green" lang="zh">歡唱加碼</div>
+                <div class="badge badge-green" lang="en">Free Bonus Hour</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🎤 優惠內容：</td>
+                    <td class="label" lang="en">🎤 Discount:</td>
+                    <td class="content" lang="zh">憑識別證消費（包廂/人頭/暢飲專案），享<strong class="highlight-text">歡唱免費加贈 1 小時</strong>。</td>
+                    <td class="content" lang="en">Present Employee ID to get <strong class="highlight-text">1 Extra Free Hour</strong> of singing (Room/Person/Drink package).</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📍 適用據點：</td>
+                    <td class="label" lang="en">📍 Location:</td>
+                    <td class="content">台中市自由路2段111號 (04-2223-6666)</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content" lang="zh">即日起至 2026/12/30 止（特殊節假日除外）</td>
+                    <td class="content" lang="en">Until 2026/12/30 (Excluding statutory holidays)</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">森林善意廚房</div>
+                <div class="card-title" lang="en">Forest Goodwill Kitchen</div>
+                <div class="badge badge-green" lang="zh">餐飲折扣</div>
+                <div class="badge badge-green" lang="en">5% OFF</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🥗 優惠內容：</td>
+                    <td class="label" lang="en">🥗 Discount:</td>
+                    <td class="content" lang="zh">出示員工識別證結帳享 <strong>95 折優惠</strong>；企業外送訂單免預付訂金，當日收取現金。</td>
+                    <td class="content" lang="en">Present Employee ID for <strong>5% OFF</strong>. Corporate delivery orders require no deposit in advance.</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">Until 2027/01/13</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">Bigtom 無罪甜（無糖冰淇淋 / 優格）</div>
+                <div class="card-title" lang="en">Bigtom Zero Sugar Ice Cream & Yogurt</div>
+                <div class="badge badge-green" lang="zh">甜點折扣</div>
+                <div class="badge badge-green" lang="en">5% OFF & Vouchers</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🍦 優惠內容：</td>
+                    <td class="label" lang="en">🍦 Discount:</td>
+                    <td class="content" lang="zh">1. 憑員工證/名片享單點主餐及飲料 <strong>95 折</strong><br>2. 企業每月累積消費滿額贈送 $150 下午茶券（滿萬送3張、滿2萬送6張、滿3萬送10張）。</td>
+                    <td class="content" lang="en">1. <strong>5% OFF</strong> main dishes and drinks with ID/Business card.<br>2. Monthly cumulative spend rewards: Earn $150 Afternoon Tea Vouchers (Spend $10k+ get 3, $20k+ get 6, $30k+ get 10).</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📍 門市地點：</td>
+                    <td class="label" lang="en">📍 Location:</td>
+                    <td class="content">台北市內湖區瑞光路258巷33號 (02-2756-0556)</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">2026/08/01 – 2027/07/31</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 3: Tech & Health -->
+        <div class="section-title">
+            <span>💻</span>
+            <span lang="zh">資訊 3C / 🧘 身心健康與醫療</span>
+            <span lang="en">Tech & Wellness Partners</span>
+        </div>
+
+        <!-- ASUS Card Updated -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">華碩官方商城 (ASUS Official Store)</div>
+                <div class="card-title" lang="en">ASUS Official Store (Corporate VIP)</div>
+                <div class="badge badge-purple" lang="zh">企購專案</div>
+                <div class="badge badge-purple" lang="en">VIP Discount</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🏷️ 優惠內容：</td>
+                    <td class="label" lang="en">🏷️ Discount:</td>
+                    <td class="content" lang="zh">
+                        請使用公司 Email (<strong>@bshg.com</strong>) 註冊/登入華碩官方商城會員，結帳輸入優惠碼即可享企購獨家優惠：<br>
+                        • <strong>10月通用優惠碼：</strong><span class="code-box">OCT26VIP</span><br>
+                        • <strong>ASUS Vivobook 15 (X1504)：</strong>原價 $27,999 ➜ 優惠碼：<span class="code-box">VIP610A</span><br>
+                        • <strong>ASUS Vivobook S14 (S5406)：</strong>原價 $39,999 ➜ 優惠碼：<span class="code-box">VIP610B</span><br>
+                        • <strong>電競 (顯卡5060) ROG Strix G16：</strong>原價 $69,999 ➜ 優惠碼：<span class="code-box">VIP610C</span><br>
+                        • <strong>電競 (顯卡5070Ti) ROG Strix G16：</strong>原價 $81,999 ➜ 優惠碼：<span class="code-box">VIP610D</span>
+                    </td>
+                    <td class="content" lang="en">
+                        Register/login with corporate email (<strong>@bshg.com</strong>) on ASUS Store for exclusive VIP deals:<br>
+                        • <strong>October Storewide Code:</strong> <span class="code-box">OCT26VIP</span><br>
+                        • <strong>ASUS Vivobook 15 (X1504):</strong> Reg. $27,999 ➜ Code: <span class="code-box">VIP610A</span><br>
+                        • <strong>ASUS Vivobook S14 (S5406):</strong> Reg. $39,999 ➜ Code: <span class="code-box">VIP610B</span><br>
+                        • <strong>ROG Strix G16 (RTX 5060):</strong> Reg. $69,999 ➜ Code: <span class="code-box">VIP610C</span><br>
+                        • <strong>ROG Strix G16 (RTX 5070Ti):</strong> Reg. $81,999 ➜ Code: <span class="code-box">VIP610D</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">🛒 訂購方式：</td>
+                    <td class="label" lang="en">🛒 How to Order:</td>
+                    <td class="content" lang="zh">
+                        1. 前往 <a href="https://store.asus.com/tw/setting/vipstore" target="_blank">華碩官方商城企購專區</a>。<br>
+                        2. 請用員工 Email 註冊華碩會員並登入選購商品，結帳時輸入本月優惠碼。<br>
+                        3. 線上訂購步驟請見 SOP 說明，如有任何問題請洽 <a href="mailto:ASUSVIP@asus.com">ASUSVIP@asus.com</a>。<br>
+                        <small style="color:#666;">※ 訂購相關說明：企業優惠及活動贈品以官網標示為主。本專案僅限華碩特約企業同仁使用，不適用於一般實體門市或其它購物平台，請勿將此資訊外流。</small>
+                    </td>
+                    <td class="content" lang="en">
+                        1. Visit the <a href="https://store.asus.com/tw/setting/vipstore" target="_blank">ASUS Store Corporate VIP Area</a>.<br>
+                        2. Register/login with your corporate email and enter promo codes at checkout.<br>
+                        3. For questions, please contact <a href="mailto:ASUSVIP@asus.com">ASUSVIP@asus.com</a>.<br>
+                        <small style="color:#666;">※ Note: Corporate offers & gifts are subject to official site display. Exclusive for partner employees only; not applicable to physical stores or other platforms. Do not share publicly.</small>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">生生優動診所暨運動物理治療所</div>
+                <div class="card-title" lang="en">Aicare Physical Therapy & Clinic</div>
+                <div class="badge badge-red" lang="zh">醫療保健</div>
+                <div class="badge badge-red" lang="en">Health Service</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🏥 優惠內容：</td>
+                    <td class="label" lang="en">🏥 Discount:</td>
+                    <td class="content" lang="zh">首次諮詢與單一部位治療特價 <strong class="highlight-text">$999 元</strong>（原價 $2,200）；購買療程服務享 <strong>98 折</strong>（出示員工證）。</td>
+                    <td class="content" lang="en">First consultation & single area treatment special price <strong class="highlight-text">$999 TWD</strong> (Reg. $2,200); <strong>2% OFF</strong> therapy course packages.</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">2026/03/01 – 2026/12/31</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">路晰書 (LucidBook) 心理肌力訓練</div>
+                <div class="card-title" lang="en">LucidBook Mental Fitness Training</div>
+                <div class="badge badge-purple" lang="zh">線上課程</div>
+                <div class="badge badge-purple" lang="en">30% OFF</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">🧠 優惠內容：</td>
+                    <td class="label" lang="en">🧠 Discount:</td>
+                    <td class="content" lang="zh">購買官網「練心產品」（電子書、EMOfree 等）享 <strong>7 折優惠</strong>（每人每年限用 2 次）。</td>
+                    <td class="content" lang="en"><strong>30% OFF</strong> online mental training products & e-books (Max 2 uses per employee per year).</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">2026/04/01 – 2027/03/31</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" lang="zh">世登健康生技 (Shining Biotech)</div>
+                <div class="card-title" lang="en">Shining Biotech</div>
+                <div class="badge badge-purple" lang="zh">健康保健</div>
+                <div class="badge badge-purple" lang="en">Biotech Offer</div>
+            </div>
+            <table class="info-table">
+                <tr>
+                    <td class="label" lang="zh">💊 優惠內容：</td>
+                    <td class="label" lang="en">💊 Discount:</td>
+                    <td class="content" lang="zh">同仁及眷屬專屬保健產品特惠，購買時請填寫企業統一編號：<span class="code-box">31982055</span>。</td>
+                    <td class="content" lang="en">Special health supplement offers for employees & family. Enter corporate Tax ID: <span class="code-box">31982055</span>.</td>
+                </tr>
+                <tr>
+                    <td class="label" lang="zh">📅 有效期限：</td>
+                    <td class="label" lang="en">📅 Validity:</td>
+                    <td class="content">2026/06/01 – 2026/12/31</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <span lang="zh">博西家用電器股份有限公司職工福利委員會 製作公告</span>
+            <span lang="en">Published by BSH Home Appliances Employee Welfare Committee</span><br>
+            <span lang="zh">如有疑問或建議，歡迎聯繫福委會窗口（Email: sunny.peng@bshg.com）</span>
+            <span lang="en">For questions or suggestions, please contact Employee Welfare Committee (Email: sunny.peng@bshg.com)</span>
+        </div>
+    </div>
+
+    <!-- One-click Switcher Script -->
+    <script>
+        function switchLang(lang) {
+            const body = document.body;
+            const btnZh = document.getElementById('btn-zh');
+            const btnEn = document.getElementById('btn-en');
+
+            if (lang === 'en') {
+                body.classList.add('lang-en');
+                btnEn.classList.add('active');
+                btnZh.classList.remove('active');
+            } else {
+                body.classList.remove('lang-en');
+                btnZh.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
