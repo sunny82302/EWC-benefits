@@ -401,7 +401,6 @@
                     <div class="flow-step-num">3</div>
                     <div class="flow-step-title" lang="zh">選擇付款方式</div>
                     <div class="flow-step-title" lang="en">Select Payment</div>
-                    <div class="flow-step-desc" lang="en">Select Payment</div>
                     <div class="flow-step-desc" lang="zh">選擇習慣的付款方式並確認加入。</div>
                     <div class="flow-step-desc" lang="en">Select your preferred payment method and confirm.</div>
                 </div>
@@ -556,7 +555,7 @@
             <span lang="en">Tech & Wellness Partners</span>
         </div>
 
-        <!-- ASUS Card Updated with Nov Offers -->
+        <!-- ASUS Card -->
         <div class="card">
             <div class="card-header">
                 <div class="card-title" lang="zh">華碩官方商城 (ASUS Official Store)</div>
@@ -672,7 +671,7 @@
             </table>
         </div>
 
-        <!-- Section 4: Wishlist / 許願池 (內嵌直連 Google Sheet) -->
+        <!-- Section 4: Wishlist / 許願池 (含窗口備註欄位) -->
         <div class="section-title">
             <span>🌟</span>
             <span lang="zh">福利許願池 — 告訴我們你想要的特約優惠！</span>
@@ -688,12 +687,12 @@
             </div>
             
             <form id="wishForm" onsubmit="submitWish(event)" style="padding: 10px 0; font-size: 14px;">
-                <p lang="zh" style="margin: 0 0 12px 0; color: #555;">心中有期待已久的口袋名單嗎？歡迎直接填寫許願，福委會將優先洽談同仁最想合作的店家！</p>
-                <p lang="en" style="margin: 0 0 12px 0; color: #555;">Have a favorite brand in mind? Submit your request directly here!</p>
+                <p lang="zh" style="margin: 0 0 12px 0; color: #555;">心中有期待已久的口袋名單嗎？歡迎直接填寫許願，若有認識店家窗口也歡迎一併提供，福委會將優先洽談同仁最想合作的店家！</p>
+                <p lang="en" style="margin: 0 0 12px 0; color: #555;">Have a favorite brand or contact in mind? Submit your request directly here!</p>
                 
-                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 12px;">
-                    <input type="text" id="storeName" required placeholder="請輸入店家/品牌名稱 (例如: 麥當勞)" 
-                           style="flex: 2; min-width: 200px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 10px;">
+                    <input type="text" id="storeName" required placeholder="店家/品牌名稱 (例如: 麥當勞)" 
+                           style="flex: 2; min-width: 180px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
                     
                     <select id="category" style="flex: 1; min-width: 130px; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
                         <option value="美食餐飲">美食餐飲</option>
@@ -704,12 +703,19 @@
                     </select>
                 </div>
 
-                <button type="submit" id="submitBtn" style="background-color: var(--accent-color); color: #fff; border: none; padding: 9px 24px; border-radius: 20px; font-weight: bold; font-size: 14px; cursor: pointer; transition: background-color 0.2s;">
-                    <span lang="zh">✨ 送出許願</span>
-                    <span lang="en">✨ Submit Wish</span>
-                </button>
-                
-                <span id="formStatus" style="margin-left: 12px; font-weight: bold; font-size: 14px;"></span>
+                <div style="margin-bottom: 12px;">
+                    <input type="text" id="contactInfo" placeholder="聯絡窗口資訊 / 電話 / 信箱或備註 (選填)" 
+                           style="width: 100%; box-sizing: border-box; padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px;">
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <button type="submit" id="submitBtn" style="background-color: var(--accent-color); color: #fff; border: none; padding: 9px 24px; border-radius: 20px; font-weight: bold; font-size: 14px; cursor: pointer; transition: background-color 0.2s;">
+                        <span lang="zh">✨ 送出許願</span>
+                        <span lang="en">✨ Submit Wish</span>
+                    </button>
+                    
+                    <span id="formStatus" style="font-weight: bold; font-size: 14px;"></span>
+                </div>
             </form>
         </div>
 
@@ -748,6 +754,7 @@
             const status = document.getElementById('formStatus');
             const storeName = document.getElementById('storeName').value;
             const category = document.getElementById('category').value;
+            const contactInfo = document.getElementById('contactInfo').value;
             
             const scriptUrl = 'https://script.google.com/macros/s/AKfycbyweaAdyqjJm2axkV0368SZREFEnwhC9RUpInrzJaUTw43yS37Vuazl-SvDRF042NKAsw/exec';
 
@@ -759,7 +766,11 @@
                 method: 'POST',
                 mode: 'no-cors',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ storeName: storeName, category: category })
+                body: JSON.stringify({ 
+                    storeName: storeName, 
+                    category: category,
+                    contactInfo: contactInfo 
+                })
             })
             .then(() => {
                 status.style.color = '#137333';
